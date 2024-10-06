@@ -44,3 +44,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Real-Time Functionality Implementation
+The real-time collaboration feature of the app was implemented using WebSockets. This enables multiple users to edit the same note simultaneously, with updates reflected in real time for all users in the same room. When a user makes changes to the note, the updated content is sent to the WebSocket server, which then broadcasts these changes to other connected users, ensuring everyone stays synchronized.
+
+Additionally, notifications are triggered when a user joins or leaves a room, helping all participants stay informed about who is actively collaborating.
+
+Challenges Faced
+Syncing Text Between Users: Initially, I had difficulty displaying changes made by one user to others. The text wasn’t updating instantly, leading to synchronization issues. After debugging, I found that the issue was with how I was updating the editor's content and fixed it to ensure smooth real-time syncing across all users.
+
+WebSocket Connection Problems: I also encountered issues with WebSocket connections dropping, especially when multiple users were connected. This required improving error handling and implementing reconnection logic to ensure the app would automatically reconnect if the WebSocket connection was lost.
