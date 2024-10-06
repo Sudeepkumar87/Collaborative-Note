@@ -1,0 +1,33 @@
+.custom-padding {
+    padding-top: 33rem !important;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .custom-padding {
+        padding-top: 20rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 998px){
+    .custom-padding {
+        padding-top: 9rem !important;
+    }
+  }
+  @media (min-width: 425px) and (max-width: 760px){
+    .custom-padding {
+        padding-top: 0rem !important;
+    }
+  }
+
+  @media (min-width: 375px) and (max-width: 415px){
+    .custom-padding {
+        padding-top: 0rem !important;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 360px){
+    .custom-padding {
+        padding-top: 0rem !important;
+    }
+  }
+
+
