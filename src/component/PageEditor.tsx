@@ -67,12 +67,8 @@ const PageEditor = forwardRef(
 
       if (socketRef.current) {
         socketRef.current.onmessage = handleWebSocketMessage;
-        socketRef.current.onerror = (error) => {
-          // Handle WebSocket errors
-        };
-        socketRef.current.onclose = () => {
-          // Handle WebSocket closure
-        };
+        socketRef.current.onerror = (error) => {};
+        socketRef.current.onclose = () => {};
       }
 
       return () => {

@@ -116,7 +116,6 @@ const EditorPage: React.FC = () => {
     });
   };
 
-  // Handle version history
   const saveVersion = (content: string) => {
     setVersionHistory((prev) => [...prev, content]);
   };
@@ -171,7 +170,7 @@ const EditorPage: React.FC = () => {
             ref={editorRef}
             onCodeChange={(code) => {
               codeRef.current = code;
-              saveVersion(code); // Save version on code change
+              saveVersion(code);
 
               if (socketRef.current) {
                 socketRef.current.send(

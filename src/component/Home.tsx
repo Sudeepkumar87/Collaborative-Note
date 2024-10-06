@@ -55,7 +55,7 @@ const Home: React.FC = () => {
                   placeholder="USERNAME"
                 />
               </div>
-              {/* Category Selection */}
+
               <div className="form-group">
                 <select
                   value={category}
